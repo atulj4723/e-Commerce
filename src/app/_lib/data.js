@@ -1,6 +1,7 @@
 const data = [
     {
         id: 1,
+        stock: 3,
         title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
         price: 109.95,
         description:
@@ -12,6 +13,7 @@ const data = [
     },
     {
         id: 2,
+        stock: 3,
         title: "Mens Casual Premium Slim Fit T-Shirts ",
         price: 22.3,
         description:
@@ -23,6 +25,7 @@ const data = [
     },
     {
         id: 3,
+        stock: 3,
         title: "Mens Cotton Jacket",
         price: 55.99,
         description:
@@ -34,6 +37,7 @@ const data = [
     },
     {
         id: 4,
+        stock: 3,
         title: "Mens Casual Slim Fit",
         price: 15.99,
         description:
@@ -45,6 +49,7 @@ const data = [
     },
     {
         id: 5,
+        stock: 3,
         title: "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
         price: 695,
         description:
@@ -55,6 +60,7 @@ const data = [
     },
     {
         id: 6,
+        stock: 3,
         title: "Solid Gold Petite Micropave ",
         price: 168,
         description:
@@ -66,6 +72,7 @@ const data = [
     },
     {
         id: 7,
+        stock: 3,
         title: "White Gold Plated Princess",
         price: 9.99,
         description:
@@ -76,6 +83,7 @@ const data = [
     },
     {
         id: 8,
+        stock: 3,
         title: "Pierced Owl Rose Gold Plated Stainless Steel Double",
         price: 10.99,
         description:
@@ -86,6 +94,7 @@ const data = [
     },
     {
         id: 9,
+        stock: 3,
         title: "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
         price: 64,
         description:
@@ -97,6 +106,7 @@ const data = [
     },
     {
         id: 10,
+        stock: 3,
         title: "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
         price: 109,
         description:
@@ -107,6 +117,7 @@ const data = [
     },
     {
         id: 11,
+        stock: 3,
         title: "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
         price: 109,
         description:
@@ -117,6 +128,7 @@ const data = [
     },
     {
         id: 12,
+        stock: 3,
         title: "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
         price: 114,
         description:
@@ -127,6 +139,7 @@ const data = [
     },
     {
         id: 13,
+        stock: 3,
         title: "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
         price: 599,
         description:
@@ -137,6 +150,7 @@ const data = [
     },
     {
         id: 14,
+        stock: 3,
         title: "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
         price: 999.99,
         description:
@@ -147,6 +161,7 @@ const data = [
     },
     {
         id: 15,
+        stock: 3,
         title: "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
         price: 56.99,
         description:
@@ -157,6 +172,7 @@ const data = [
     },
     {
         id: 16,
+        stock: 3,
         title: "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
         price: 29.95,
         description:
@@ -167,6 +183,7 @@ const data = [
     },
     {
         id: 17,
+        stock: 3,
         title: "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
         price: 39.99,
         description:
@@ -177,6 +194,7 @@ const data = [
     },
     {
         id: 18,
+        stock: 3,
         title: "MBJ Women's Solid Short Sleeve Boat Neck V ",
         price: 9.85,
         description:
@@ -187,6 +205,7 @@ const data = [
     },
     {
         id: 19,
+        stock: 3,
         title: "Opna Women's Short Sleeve Moisture",
         price: 7.95,
         description:
@@ -197,6 +216,7 @@ const data = [
     },
     {
         id: 20,
+        stock: 3,
         title: "DANVOUY Womens T Shirt Casual Cotton Short",
         price: 12.99,
         description:
