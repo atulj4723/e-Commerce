@@ -1,10 +1,10 @@
 "use client";
 import data from "@/app/_lib/data";
 import ProductCard from "@/app/components/ProductCard";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-const page = () => {
+const SearchPage = () => {
     const searchParams = useSearchParams();
     const initialSearchVal = searchParams.get("searchVal") || ""; // Get the search value from the query params
     const [searchVal, setSearchVal] = useState(initialSearchVal);
@@ -74,7 +74,7 @@ const page = () => {
 
     return (
         <div className="h-full flex flex-col items-center bg-gray-100 p-5">
-            <div className="bg-white w-full  border-2 gap-4 flex flex-col border-gray-300 p-5 rounded-xl shadow-lg">
+            <div className="bg-white w-full border-2 gap-4 flex flex-col border-gray-300 p-5 rounded-xl shadow-lg">
                 <h1 className="text-center text-2xl font-bold text-gray-700">
                     Search Results
                 </h1>
@@ -90,7 +90,8 @@ const page = () => {
                     style={{
                         gridTemplateColumns:
                             "repeat(auto-fit, minmax(100px, 1fr))",
-                    }}>
+                    }}
+                >
                     {categories.map((cur) => {
                         return (
                             <div
@@ -100,7 +101,8 @@ const page = () => {
                                         ? "bg-red-400 text-white"
                                         : "bg-white text-black"
                                 } cursor-pointer border-2 border-gray-300 rounded-xl p-1`}
-                                onClick={() => handleCategoryClick(cur)}>
+                                onClick={() => handleCategoryClick(cur)}
+                            >
                                 {cur.toUpperCase()}
                             </div>
                         );
@@ -108,7 +110,8 @@ const page = () => {
                 </div>
                 <div
                     className="flex flex-col gap-3 w-full p-2 mt-4"
-                    style={style.gridContainer}>
+                    style={style.gridContainer}
+                >
                     {filterResults.length > 0 ? (
                         filterResults.map((cur, idx) => (
                             <ProductCard product={cur} key={idx} />
@@ -122,4 +125,12 @@ const page = () => {
     );
 };
 
-export default page;
+const Page = () => {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <SearchPage />
+        </Suspense>
+    );
+};
+
+export default Page;
