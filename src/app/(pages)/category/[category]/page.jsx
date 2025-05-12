@@ -5,7 +5,6 @@ import React from "react";
 
 const page = ({ params }) => {
     const { category } = params;
-    console.log(category);
     const style = {
         gridContainer: {
             display: "grid",

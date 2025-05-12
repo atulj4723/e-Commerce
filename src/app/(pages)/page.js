@@ -16,6 +16,11 @@ const Home = () => {
             gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
             gap: "1rem",
         },
+        gridContainer3: {
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+            gap: "1rem",
+        },
     };
     const category = [
         ...new Set(
@@ -24,22 +29,38 @@ const Home = () => {
             })
         ),
     ];
-
+    const sortedData = [...data].sort((a, b) => b.rating.rate - a.rating.rate);
+    const deals = [...data].filter((cur) => {
+        return cur.offer && cur.offer >= 50;
+    });
+    deals.sort((a, b) => b.offer - a.offer);
     return (
         <div className="p-2">
-            <HeroSection data={data[0]}  />;
-               
+            <HeroSection data={data[0]} />
+            <h1 className="pl-10 font-bold text-2xl">Top Deals</h1>
+            <div style={style.gridContainer3} className="p-5">
+                {deals &&
+                    deals.map((product) => {
+                        return (
+                            <ProductCard product={product} key={product.id} />
+                        );
+                    })}
+            </div>
             <h1 className="pl-10 font-bold text-2xl">Category</h1>
             <div style={style.gridContainer2} className="p-5">
-                {category.map((cur, i) => {
-                    return <CategoryCard category={cur} key={i} />;
-                })}
+                {category &&
+                    category.map((cur, i) => {
+                        return <CategoryCard category={cur} key={i} />;
+                    })}
             </div>
             <h1 className="pl-10 font-bold text-2xl">Top Pick's</h1>
             <div style={style.gridContainer} className="p-5">
-                {data.map((product) => {
-                    return <ProductCard product={product} key={product.id} />;
-                })}
+                {sortedData &&
+                    sortedData.map((product) => {
+                        return (
+                            <ProductCard product={product} key={product.id} />
+                        );
+                    })}
             </div>
         </div>
     );
